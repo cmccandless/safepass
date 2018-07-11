@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="safepass",
-    version="1.0.0",
+    version="1.0.1",
     author="Corey McCandless",
     author_email="crm1994@gmail.com",
     description=(

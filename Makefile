@@ -1,4 +1,4 @@
-all: build test upload
+all: clean build test upload
 
 clean:
 	- rm -rf build/ dist/ *.egg-info/

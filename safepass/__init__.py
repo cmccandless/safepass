@@ -22,5 +22,5 @@ def safepass(passwd):
                 print('NOT SAFE!')
                 return False
             break
-    print('SAFE')
+    print('SAFE!')
     return True

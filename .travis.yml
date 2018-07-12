@@ -1,0 +1,21 @@
+sudo: false
+
+language: python
+python:
+- '2.7'
+- '3.3'
+- '3.6'
+- '3.7'
+
+script: make test
+
+deploy:
+  provider: pypi
+  user: cmccandless
+  password:
+    secure: J2T1gak9VAB2+RNxY9DKIycfNMDAjPu0VGdAYMFiXWR59rea/MaVWJElW0plyYCLFJfq7C6Gpmt5kx82vtJemjFnASNdE72OZT90cRxXiPdWnmjnlkw85HnTsqa4XPEOZJ0uNrm8T/3yhXo7WHyy+12QFBcSwaqL/xb+WYEjGisbSxN259Iuhka3QT5aNen80jrJgkjdmZRU3cFGVv+fvzdNek+RNTgTliShb64D0II/g1jUpDMjaI2MIsCo+X4nktLm1UNJnHLKJ5xlL2jcy6K5P5ryAf+T5vNtJ74Do75j40zOpZrtyNgy+sag+8DniimLexB3PAGmobwBg5t4fKgfoB56gPHjs7FB0e8xjXvNgr3Q9fBWFpuO2700/cu7+/uJePLNKOoL6cDB3f6O9DehElUrexGs2L+mXsHHuqu1KsNk5nl1IV+f9Spzp5v8IUiRl+7+qTcDGK1uHNS+TOTNP07hxvU7+tvUBLXvgVre8IXct7QCgDjpH/Lbg6tSlK/EtDa60j90Juqo6C580H5yOJg6botg3kolN7u9nMGX9ARzVQRYD7dFrcv2Dg5zSHua2kBJ+kMi9cp/EO3QNYhkBBZXaNO5Krt2+aa/vx8KchSMg1TUWePISNjg/v726pH1OrdphcEfOMCisl27tJPE35/XbNdODNolMHYnNSI=
+  on:
+    branch: master
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: cmccandless/safepass

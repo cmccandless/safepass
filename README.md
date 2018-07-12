@@ -25,3 +25,17 @@ $ echo $?
 *Note: scripting mode intended for situations where command history is not saved. Please use above interactive mode if checking directly in command line.*
 
 `$ safepass $PASSWORD`
+
+### API
+
+```bash
+>>> from safepass import safepass
+>>> result=safepass(PWNED_PASSWORD)
+NOT SAFE!
+>>> result
+False
+>>> result=safepass(NOT_PWNED_PASSWORD)
+SAFE!
+>>> result
+True
+```

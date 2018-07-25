@@ -19,8 +19,6 @@ def safepass(passwd):
         count = int(count)
         if hashed.endswith(suffix):
             if count > 0:
-                print('NOT SAFE!')
                 return False
             break
-    print('SAFE!')
     return True

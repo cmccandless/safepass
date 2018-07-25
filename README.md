@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/cmccandless/safepass.svg?branch=master)](https://travis-ci.com/cmccandless/safepass)[![PyPI version](https://badge.fury.io/py/safepass.svg)](https://badge.fury.io/py/safepass)[![Updates](https://pyup.io/repos/github/cmccandless/safepass/shield.svg)](https://pyup.io/repos/github/cmccandless/safepass/)[![Python 3](https://pyup.io/repos/github/cmccandless/safepass/python-3-shield.svg)](https://pyup.io/repos/github/cmccandless/safepass/)
+
 # safepass
 Check passwords against https://haveibeenpwned.com/API/v2#PwnedPasswords
 
@@ -23,3 +25,17 @@ $ echo $?
 *Note: scripting mode intended for situations where command history is not saved. Please use above interactive mode if checking directly in command line.*
 
 `$ safepass $PASSWORD`
+
+### API
+
+```bash
+>>> from safepass import safepass
+>>> result=safepass(PWNED_PASSWORD)
+NOT SAFE!
+>>> result
+False
+>>> result=safepass(NOT_PWNED_PASSWORD)
+SAFE!
+>>> result
+True
+```

@@ -1,5 +1,6 @@
 import safepass
 import sys
+import pkg_resources
 from getpass import getpass
 
 
@@ -9,12 +10,12 @@ def is_safe(passwd):
     return safe
 
 
+
 def main():
     if len(sys.argv) > 1:
         if '--version' in sys.argv:
-            sys.path.insert(0, '..')
-            from setup import VERSION
-            print(VERSION)
+            version = pkg_resources.require("safepass")[0].version
+            print(version)
             result = 0
         else:
             result = True
